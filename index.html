@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--g0yxrd#1655--> 
+	<meta charset="utf-8">
+	<title>by web-services.io</title>
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css">
+	<link type="text/css" rel="stylesheet" href="assets/css/fonts.css">
+	<script src="https://kit.fontawesome.com/ddcc130b4a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<style> 
+	 * {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		user-select: none;
+	
+	}
+	
+	body,
+	html {
+		height: 100%;
+		width: 100%;
+	
+	}
+	
+	input {
+		outline: none;
+		border: none;
+	
+	}
+	
+	button {
+		outline: none !important;
+		border: none;
+		cursor: pointer;
+	
+	}
+	
+	.form {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		min-height: 100vh;
+		z-index: 1;
+		overflow: hidden;
+	
+	}
+	
+	.container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 74.1666666666vw;
+		height: 40.8854166666vw;
+		background: var(--clr-main-background-gradient);
+		border-radius: 1.5625vw;
+	
+	}
+	
+	.help-txt,
+	.header,
+	.btns-row,
+	.search-input-box {
+		display: flex;
+		align-items: center;
+	
+	}
+	
+	.column,
+	.car-info-txt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	
+	}
+	
+	.header {
+		position: relative;
+		justify-content: center;
+		align-items: flex-start;
+		width: 67.5vw;
+		margin-top: 2.0833333333vw;
+	
+	}
+	
+	.logo-img {
+		width: 3.8020833333vw;
+		height: 1.1458333333vw;
+	
+	}
+	
+	.header span:nth-child(2) {
+		font-family: Montserrat-Bold;
+		font-size: 0.7291666666vw;
+		margin-top: 0.3645833333vw;
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.header span:nth-child(3) {
+		font-family: Montserrat-SemiBold;
+		font-size: 0.5208333333vw;
+		margin-top: 0.1041666666vw;
+		color: var(--clr-white-head-txt-color);
+	
+	}
+	
+	.window-name {
+		position: absolute;
+		font-family: Montserrat-Bold;
+		font-size: 2.0833333333vw;
+		text-transform: uppercase;
+		left: 0vw;
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.close-btn {
+		position: absolute;
+		right: 0vw;
+		width: 0.8333333333vw;
+		height: 0.8333333333vw;
+		margin-top: 1.25vw;
+		opacity: 0.24;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.close-btn:hover {
+		opacity: 1;
+		transform: scale(1.05);
+	
+	}
+	
+	.category-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: Montserrat-Medium;
+		font-size: 0.8333333333vw;
+		text-transform: uppercase;
+		width: 10vw;
+		height: 2.5vw;
+		margin-left: 0.8333333333vw;
+		background: var(--clr-low-opacity-white-for-background);
+		color: var(--clr-half-opacity-white);
+		border-radius: 0.2083333333vw;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.btns-row .category-btn:first-child {
+		margin-left: 0vw;
+	
+	}
+	
+	.category-btn:hover,
+	.category-choised {
+		font-family: Montserrat-SemiBold;
+		background: var(--clr-main-color-blue);
+		box-shadow: 0vw 0vw 1.25vw var(--clr-shadow-blue);
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.btns-row {
+		width: 67.5vw;
+		margin-top: 0.5729166666vw;
+	
+	}
+	
+	.search-input-box {
+		position: relative;
+		width: 15.625vw;
+		height: 2.5vw;
+		margin-left: auto;
+		background: var(--clr-low-opacity-white-for-background);
+		border-radius: 0.2083333333vw;
+	
+	}
+	
+	.search-input-box img {
+		position: absolute;
+		width: 1.25vw;
+		height: 1.25vw;
+		left: 1.6666666666vw;
+		opacity: 0.32;
+	
+	}
+	
+	.search-input-box input {
+		font-family: Montserrat-Medium;
+		font-size: 0.8333333333vw;
+		width: 100%;
+		height: 100%;
+		padding: 0vw 1.6666666666vw 0vw 3.75vw;
+		background: transparent;
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.overflow-list {
+		width: 68.3333333333vw;
+		height: 26.6666666666vw;
+		margin-top: 1.25vw;
+		margin-left: 0.8333333333vw;
+		overflow-y: auto;
+	
+	}
+	
+	.flex-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	
+	}
+	
+	.car {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 15.625vw;
+		height: 12.5vw;
+		margin: 1.6666666666vw 0vw 0vw 1.6666666666vw;
+		background: var(--clr-low-opacity-white-for-background);
+		box-shadow: 0vw 0.3125vw 0.8333333333vw rgba(0, 0, 0, 0.12), inset 0vw 0vw 5vw rgba(0, 0, 0, 0.32);
+		border-radius: 0.2083333333vw;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.car:hover {
+		background: var(--clr-hover-car-white-low-opacity);
+	
+	}
+	
+	.car-info-txt {
+		position: absolute;
+		top: 0.8333333333vw;
+		left: 1.25vw;
+		align-items: flex-start;
+	
+	}
+	
+	.car-info-txt span:first-child {
+		font-family: Montserrat-SemiBold;
+		font-size: 0.8333333333vw;
+		text-transform: uppercase;
+		color: var(--clr-main-color-blue);
+		text-shadow: 0vw 0vw 0.4166666666vw var(--clr-second-shadow-blue);
+	
+	}
+	
+	.car-info-txt span:last-child {
+		font-family: Montserrat-Medium;
+		font-size: 0.7291666666vw;
+		margin-top: 0.3125vw;
+		color: var(--clr-second-half-opacity-white);
+	
+	}
+	
+	.edit-name-btn {
+		position: absolute;
+		width: 1.25vw;
+		height: 1.25vw;
+		top: 0.6770833333vw;
+		right: 0.8333333333vw;
+		opacity: 0.24;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.edit-name-btn:hover {
+		opacity: 1;
+	
+	}
+	
+	.vertical-line {
+		position: absolute;
+		width: 0.2083333333vw;
+		height: 4.1666666666vw;
+		left: 0vw;
+		background: var(--clr-main-color-blue);
+		box-shadow: 0.1041666666vw 0vw 0.4166666666vw var(--clr-second-shadow-blue);
+		border-radius: 0vw 0.4166666666vw 0.4166666666vw 0vw;
+	
+	}
+	
+	
+	.car-img {
+		font-size: 3.90625vw;
+		color: var(--clr-main-color-blue);
+		background: var(--clr-main-color-blue);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		opacity: 0.48;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.car-img:hover {
+		transform: translateY(0.1041666666vw);
+		opacity: 1;
+	
+	}
+	
+	.car-btn {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: Montserrat-SemiBold;
+		font-size: 0.8333333333vw;
+		text-transform: uppercase;
+		width: 13.125vw;
+		height: 2.5vw;
+		bottom: 0.8333333333vw;
+		background: var(--clr-low-opacity-white-for-background);
+		border: 0.0520833333vw solid var(--clr-one-percent-white-opacity-btn-border);
+		box-shadow: inset 0vw 0vw 5vw rgba(0, 0, 0, 0.32);
+		color: var(--clr-transparent-white-text);
+		border-radius: 0.2083333333vw;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.car-btn:hover {
+		background: var(--clr-main-color-blue);
+		box-shadow: 0vw 0vw 1.25vw var(--clr-shadow-blue);
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.car:nth-child(4n+1) {
+		margin: 1.25vw 0vw 0vw 0vw;
+	
+	}
+	
+	.car:nth-child(1),
+	.car:nth-child(2),
+	.car:nth-child(3),
+	.car:nth-child(4) {
+		margin-top: 0vw;
+	
+	}
+	
+	.help-txt {
+		position: absolute;
+		bottom: 1.6666666666vw;
+		opacity: 0.24;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.help-txt:hover {
+		opacity: 0.48;
+	
+	}
+	
+	.help-txt img {
+		width: 1.25vw;
+		height: 1.25vw;
+	
+	}
+	
+	.help-txt span {
+		font-family: Montserrat-Medium;
+		font-size: 0.7291666666vw;
+		margin-left: 0.4166666666vw;
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.loader {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 74.1666666666vw;
+		height: 40.8854166666vw;
+		border-radius: 1.5625vw;
+		background: var(--clr-loader-background-transparent-black);
+		z-index: 99;
+	
+	}
+	
+	.loader img {
+		width: 3.75vw;
+		height: 3.75vw;
+		animation: rotate 1s ease infinite;
+	
+	}
+	
+	.change-name-window {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: Montserrat-Medium;
+		width: 22.7083333333vw;
+		height: 11.875vw;
+		padding-top: 1.6666666666vw;
+		background: var(--clr-main-background-gradient);
+		opacity: 0.98;
+		border-radius: 0.4166666666vw;
+		z-index: 15;
+	
+	}
+	
+	.change-name-window span {
+		font-size: 0.8333333333vw;
+		text-transform: uppercase;
+		color: var(--clr-white-txt-color);
+	
+	}
+	
+	.change-name-window input {
+		text-align: center;
+		font-size: 0.8333333333vw;
+		width: 17.7083333333vw;
+		height: 2.5vw;
+		margin-top: 1.6666666666vw;
+		background: var(--clr-btn-background);
+		color: var(--clr-white-txt-color);
+		border-radius: 0.4166666666vw;
+	
+	}
+	
+	.confirm-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.8333333333vw;
+		width: 17.7083333333vw;
+		height: 2.5vw;
+		margin-top: 0.8333333333vw;
+		background: var(--clr-btn-background);
+		color: var(--clr-white-txt-color);
+		border-radius: 0.4166666666vw;
+		transition: all 0.15s ease;
+	
+	}
+	
+	.confirm-btn:hover {
+		background: var(--clr-main-color-blue);
+		box-shadow: 0vw 0vw 0.8333333333vw var(--clr-second-shadow-blue);
+		transform: translateY(0.1041666666vw);
+	
+	}
+	
+	.change-name-window .close-btn {
+		margin-top: 0vw;
+		top: 1.6666666666vw;
+		right: 2.5vw;
+	
+	}
+	
+	.full-screen-block {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 74.1666666666vw;
+		height: 40.8854166666vw;
+		border-radius: 1.5625vw;
+		background: var(--clr-loader-background-transparent-black);
+		z-index: 100;
+	
+	}
+	
+	.blur {
+		filter: blur(0.15625vw);
+	
+	}
+	
+	::-webkit-scrollbar {
+		width: 0.2083333333vw;
+	
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: var(--clr-main-color-blue);
+	
+	}
+	
+	::-webkit-scrollbar-thumb:active {
+		background: var(--clr-half-opacity-white);
+	
+	}
+	
+	::-webkit-scrollbar-track {
+		background: var(--clr-low-opacity-white-for-background);
+	
+	}
+	
+	@keyframes rotate {
+		from {
+			transform: rotate(360deg);
+	
+		}
+	
+		to {
+			transform: rotate(0deg);
+	
+		}
+	
+	
+	}
+	
+	input::-webkit-input-placeholder {
+		opacity: 1;
+		color: var(--clr-transparent-white-text);
+		transition: all 0.15s ease;
+	}
+	
+	input:focus::-webkit-input-placeholder {
+		opacity: 0;
+		color: var(--clr-transparent-white-text);
+		transition: all 0.15s ease;
+	}
+	
+</style>  
+<div class="form" style="display: none;">
+   <div class="loader" style="display: none;">  <img src="assets/images/loader.svg" />  </div>
+   <div class="full-screen-block change-name-window-container" style="display: none;">
+      <div class="change-name-window">
+         <span class="lang_editCarName">Fahrzeugnamen editieren</span>  <img class="close-btn" src="assets/images/close.svg" onclick="nicknameWindow(false);">  <input type="text" placeholder="Name" class="input_nickname">  
+         <div class="confirm-btn" onclick="setNickname();">Bestätigen</div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="header">
+         <span class="window-name">Garage</span>  
+         <div class="column">  <img class="logo-img" src="assets/images/logo.png" />  <span class="cfg_title">WebServices</span>  <span class="cfg_subTitle">Garage System</span>  </div>
+         <img class="close-btn" src="assets/images/close.svg" onclick="closeUi()">  
+      </div>
+      <div class="btns-row">
+         <div class="category-btn parkOut category-choised" onclick=>AUSPARKEN</div>
+         <div class="category-btn parkIn" onclick=>EINPARKEN</div>
+         <div class="search-input-box">  <input type="text" placeholder="Suchen ..." id="search_val" class="search_val" oninput>  <img src="assets/images/search.svg" />  </div>
+      </div>
+      <div class="overflow-list">
+         <div class="flex-grid"></div>
+      </div>
+      <div class="help-txt">  <img src="assets/images/info.svg" />  <span class="lang_infoText">You can also change the name of your car and search by its changed name.</spann>  </div>
+   </div>
+</div>	<script src="assets/js/cfg.js"></script>
+</body>
+</html>
