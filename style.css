@@ -1,0 +1,23 @@
+:root {
+	--clr-white-txt-color: #ffffff;
+	--clr-white-head-txt-color: rgba(255, 255, 255, 0.57);
+
+	--clr-half-opacity-white: rgba(255, 255, 255, 0.4);
+	--clr-second-half-opacity-white: rgba(255, 255, 255, 0.48);
+
+	--clr-transparent-white-text: rgba(255, 255, 255, 0.32);
+
+	--clr-hover-car-white-low-opacity: rgba(255, 255, 255, 0.1);
+	--clr-low-opacity-white-for-background: rgba(255, 255, 255, 0.08);
+
+	--clr-btn-background: rgba(255, 255, 255, 0.04);
+	--clr-one-percent-white-opacity-btn-border: rgba(255, 255, 255, 0.01);
+
+	--clr-main-color-blue: #1F77B1;
+	--clr-shadow-blue: rgba(31, 119, 177, 0.3);
+	--clr-second-shadow-blue: rgba(31, 119, 177, 0.4);
+
+	--clr-loader-background-transparent-black: rgba(0, 0, 0, 0.32);
+
+	--clr-main-background-gradient: radial-gradient(40.93% 40.93% at 50% 97.5%, rgba(33, 105, 134, 0.066) 4.88%, rgba(255, 255, 255, 0) 100%), radial-gradient(46.28% 146.26% at 96.28% 60.79%, rgba(33, 105, 134, 0.2) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(76.46% 241.65% at 5.23% 8.7%, rgba(33, 105, 134, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #12141B;
+}
